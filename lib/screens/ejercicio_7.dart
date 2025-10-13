@@ -6,6 +6,7 @@ class DisposicionImagenes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double anchoPantalla = MediaQuery.of(context).size.width;
     return Scaffold(
       // Cabecera
       appBar: AppBar(
@@ -22,11 +23,17 @@ class DisposicionImagenes extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 150, 196, 98),
 
       // Columna para que las imágenes se vayan insertando una debajo de otra
-      body: Column(
+      body: ListView(
         children: [
           // Utilizo Row dentro de Column para poner las imágenes en fila
           // Fila 1
-          Row(children: [Image.asset("assets/imgs/python.png")]),
+          Row(children: [
+            Image.asset(
+              "assets/img/atomo.jpg",
+              width: anchoPantalla * 0.8, // 80% del ancho de pantalla
+                  height: 200,
+                  fit: BoxFit.cover, // recorta si no encaja exactamente
+              )]),
 
           // Fila 2
           Row(
@@ -47,12 +54,15 @@ class DisposicionImagenes extends StatelessWidget {
 
           // Fila 3
           Row(
-            // Separo las imagenes con una distancia idéntica
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset("assets/imgs/flutter.png"),
-              Image.asset("assets/imgs/flutter.png"),
-              Image.asset("assets/imgs/flutter.png"),
+              for (int i = 0; i < 3; i++)
+                Image.asset(
+                  "assets/img/perros.jpg",
+                  width: (anchoPantalla - 64) / 3, // tres imágenes ajustadas al ancho
+                  height: 120,
+                  fit: BoxFit.cover,
+                ),
             ],
           ),
         ],
