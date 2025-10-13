@@ -1,3 +1,6 @@
+import 'package:relacion_ejercicios_tema1/screens/ejercicio_6.dart';
+import 'package:relacion_ejercicios_tema1/screens/ejercicio_7.dart';
+
 import 'home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -144,6 +147,45 @@ class MenuLateral extends StatelessWidget {
             },
           ),
         ),
+
+        Ink(
+          color: const Color.fromARGB(255, 230, 145, 96),
+          child: ListTile(
+            title: const Text(
+              "Ejercicio 6",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const TextoDesbordado(),
+                ),
+              );
+            },
+          ),
+        ),
+
+        Ink(
+          color: const Color.fromARGB(255, 150, 196, 98),
+          child: ListTile(
+            title: const Text(
+              "Ejercicio 7",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      const DisposicionImagenes(),
+                ),
+              );
+            },
+          ),
+        ),
+
+
       ],
     );
   }
