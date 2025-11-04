@@ -1,3 +1,4 @@
+import 'package:relacion_ejercicios_tema1/screens/ejercicio_11/ejercicio_11.dart';
 import 'package:relacion_ejercicios_tema1/screens/ejercicio_6.dart';
 import 'package:relacion_ejercicios_tema1/screens/ejercicio_7.dart';
 
@@ -9,6 +10,12 @@ import 'ejercicio_2.dart';
 import 'ejercicio_3.dart';
 import 'ejercicio_4.dart';
 import 'ejercicio_5.dart';
+import 'ejercicio_6.dart';
+import 'ejercicio_7.dart';
+import 'ejercicio_8.dart';
+import 'ejercicio_9.dart';
+import 'ejercicio_10.dart';
+import 'ejercicio_11/ejercicio_11.dart';
 
 // La clase representa el contenido del menú lateral (Drawer)
 class MenuLateral extends StatelessWidget {
@@ -185,6 +192,81 @@ class MenuLateral extends StatelessWidget {
           ),
         ),
 
+        Ink(
+          color: const Color.fromARGB(255, 170, 115, 44),
+          child: ListTile(
+            title: const Text(
+              "Ejercicio 8",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      const Ejercicio8(),
+                ),
+              );
+            },
+          ),
+        ),
+
+        Ink(
+          color: const Color.fromARGB(255, 153, 18, 18),
+          child: ListTile(
+            title: const Text(
+              "Ejercicio 9",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      const Ejercicio9(),
+                ),
+              );
+            },
+          ),
+        ),
+
+        Ink(
+          color: const Color.fromARGB(255, 48, 58, 119),
+          child: ListTile(
+            title: const Text(
+              "Ejercicio 10",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      const Ejercicio10(),
+                ),
+              );
+            },
+          ),
+        ),
+
+        Ink(
+          color: const Color.fromARGB(255, 163, 140, 110),
+          child: ListTile(
+            title: const Text(
+              "Ejercicio 11",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      const Ejercicio11(),
+                ),
+              );
+            },
+          ),
+        ),
 
       ],
     );
