@@ -1,10 +1,6 @@
-import 'package:relacion_ejercicios_tema1/screens/ejercicio_11/ejercicio_11.dart';
-import 'package:relacion_ejercicios_tema1/screens/ejercicio_6.dart';
-import 'package:relacion_ejercicios_tema1/screens/ejercicio_7.dart';
-
-import 'home_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'home_screen.dart';
 import 'ejercicio_1.dart';
 import 'ejercicio_2.dart';
 import 'ejercicio_3.dart';
@@ -16,6 +12,8 @@ import 'ejercicio_8.dart';
 import 'ejercicio_9.dart';
 import 'ejercicio_10.dart';
 import 'ejercicio_11/ejercicio_11.dart';
+import 'ejercicio_12.dart';
+import 'ejercicio_13.dart';
 
 // La clase representa el contenido del menú lateral (Drawer)
 class MenuLateral extends StatelessWidget {
@@ -39,24 +37,23 @@ class MenuLateral extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             image: DecorationImage(
-              // Imagen de fondo cargada desde una URL
-              image: NetworkImage(
-                "https://p4.wallpaperbetter.com/wallpaper/580/399/655/nature-jpg-format-download-1920x1200-wallpaper-preview.jpg",
+              // Imagen de fondo cargada desde assets
+              image: AssetImage(
+                "assets/img/fondo_drawer.jpg", // pon aquí la que tengas
               ),
               fit: BoxFit.cover,
             ),
           ),
         ),
 
+        // INICIO
         Ink(
-          // Widget para aplicar color de fondo y efectos táctiles
-          color: const Color.fromARGB(255, 147, 245, 62),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text("Inicio"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el menú lateral
+              Navigator.of(context).pop(); 
               Navigator.of(context).push(
-                // Navega a la nueva pantalla
                 MaterialPageRoute(
                   builder: (BuildContext context) => const MyApp(),
                 ),
@@ -65,25 +62,26 @@ class MenuLateral extends StatelessWidget {
           ),
         ),
 
+        // EJERCICIO 1
         Ink(
-          // Widget para aplicar color de fondo y efectos táctiles
-          color: const Color.fromARGB(255, 2, 70, 134),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text("Ejercicio 1"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el menú lateral
+              Navigator.of(context).pop(); 
               Navigator.of(context).push(
-                // Navega a la nueva pantalla
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const InfomacionPersonal(),
+                  builder: (BuildContext context) =>
+                      const InfomacionPersonal(),
                 ),
               );
             },
           ),
         ),
 
+        // EJERCICIO 2
         Ink(
-          color: const Color.fromARGB(255, 146, 2, 182),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 2",
@@ -100,8 +98,9 @@ class MenuLateral extends StatelessWidget {
           ),
         ),
 
+        // EJERCICIO 3
         Ink(
-          color: const Color.fromARGB(255, 206, 137, 9),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 3",
@@ -111,15 +110,17 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const TresFotosColumnas(),
+                  builder: (BuildContext context) =>
+                      const TresFotosColumnas(),
                 ),
               );
             },
           ),
         ),
 
+        // EJERCICIO 4
         Ink(
-          color: const Color.fromARGB(255, 233, 11, 11),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 4",
@@ -136,12 +137,13 @@ class MenuLateral extends StatelessWidget {
           ),
         ),
 
+        // EJERCICIO 5
         Ink(
-          color: const Color.fromARGB(255, 0, 0, 0),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 5",
-              style: TextStyle(color: Color.fromARGB(255, 204, 169, 55)),
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
             ),
             onTap: () {
               Navigator.of(context).pop();
@@ -155,8 +157,9 @@ class MenuLateral extends StatelessWidget {
           ),
         ),
 
+        // EJERCICIO 6
         Ink(
-          color: const Color.fromARGB(255, 230, 145, 96),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 6",
@@ -166,13 +169,15 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const TextoDesbordado(),
+                  builder: (BuildContext context) =>
+                      const TextoDesbordado(),
                 ),
               );
             },
           ),
         ),
 
+        // EJERCICIO 7
         Ink(
           color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
@@ -192,8 +197,9 @@ class MenuLateral extends StatelessWidget {
           ),
         ),
 
+        // EJERCICIO 8
         Ink(
-          color: const Color.fromARGB(255, 170, 115, 44),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 8",
@@ -203,16 +209,16 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                      const Ejercicio8(),
+                  builder: (BuildContext context) => const Ejercicio8(),
                 ),
               );
             },
           ),
         ),
 
+        // EJERCICIO 9
         Ink(
-          color: const Color.fromARGB(255, 153, 18, 18),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 9",
@@ -222,16 +228,16 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                      const Ejercicio9(),
+                  builder: (BuildContext context) => const Ejercicio9(),
                 ),
               );
             },
           ),
         ),
 
+        // EJERCICIO 10
         Ink(
-          color: const Color.fromARGB(255, 48, 58, 119),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 10",
@@ -241,16 +247,16 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                      const Ejercicio10(),
+                  builder: (BuildContext context) => const Ejercicio10(),
                 ),
               );
             },
           ),
         ),
 
+        // EJERCICIO 11
         Ink(
-          color: const Color.fromARGB(255, 163, 140, 110),
+          color: const Color.fromARGB(255, 150, 196, 98),
           child: ListTile(
             title: const Text(
               "Ejercicio 11",
@@ -260,14 +266,50 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                      const Ejercicio11(),
+                  builder: (BuildContext context) => const Ejercicio11(),
                 ),
               );
             },
           ),
         ),
 
+        // EJERCICIO 12
+        Ink(
+          color: const Color.fromARGB(255, 150, 196, 98),
+          child: ListTile(
+            title: const Text(
+              "Ejercicio 12",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Ejercicio12(),
+                ),
+              );
+            },
+          ),
+        ),
+
+        // EJERCICIO 13
+        Ink(
+          color: const Color.fromARGB(255, 150, 196, 98),
+          child: ListTile(
+            title: const Text(
+              "Ejercicio 13",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Ejercicio13(),
+                ),
+              );
+            },
+          ),
+        ),
       ],
     );
   }
